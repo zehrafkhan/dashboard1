@@ -1,0 +1,12 @@
+import { connect } from 'mongoose';
+
+const connectDB=async(url)=>{
+    await(connect(url)).then((e)=>{
+        console.log("Connected to database successfully")
+    }).catch((e)=>{console.log("error in connecting to database")
+    console.log(e);
+})
+}
+
+
+export default connectDB;
